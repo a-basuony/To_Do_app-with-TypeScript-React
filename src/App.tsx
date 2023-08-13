@@ -1,6 +1,7 @@
 // App.tsx
 import React, { useState } from "react";
 import TodoList from "./components/TodoList";
+import "./style.css";
 
 interface Todo {
   id: number;
@@ -33,14 +34,19 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <h1>Todo App</h1>
-      <input
-        type="text"
-        value={newTodo}
-        onChange={(e) => setNewTodo(e.target.value)}
-        placeholder="Add a new todo..."
-      />
-      <button onClick={addTodo}>Add</button>
+      <h1 className="header">Todo App</h1>
+      <div className="input-container">
+        <input
+          type="text"
+          value={newTodo}
+          onChange={(e) => setNewTodo(e.target.value)}
+          className="todo-input"
+          placeholder="Add a new todo..."
+        />
+        <button className="add-button" onClick={addTodo}>
+          Add
+        </button>
+      </div>
       <TodoList todos={todos} onToggle={toggleTodo} onRemove={removeTodo} />
     </div>
   );

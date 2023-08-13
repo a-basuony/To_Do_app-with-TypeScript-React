@@ -15,10 +15,16 @@ const TodoItem: React.FC<TodoItemProps> = ({
   onRemove,
 }) => {
   return (
-    <li style={{ textDecoration: completed ? "line-through" : "none" }}>
-      {text}
-      <button onClick={onToggle}>{completed ? "Undo" : "Complete"}</button>
-      <button onClick={onRemove}>Remove</button>
+    <li className={`todo-item ${completed ? "completed" : ""}`}>
+      <div className="todo-text" onClick={onToggle}>
+        {text}
+      </div>
+      <button className="complete-button" onClick={onToggle}>
+        {completed ? "Undo" : "Complete"}
+      </button>
+      <button className="remove-button" onClick={onRemove}>
+        Remove
+      </button>
     </li>
   );
 };

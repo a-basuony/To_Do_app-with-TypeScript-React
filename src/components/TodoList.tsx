@@ -2,6 +2,7 @@
 import React from "react";
 import TodoItem from "./TodoItem";
 
+//array of objects
 interface Todo {
   id: number;
   text: string;
@@ -9,6 +10,7 @@ interface Todo {
 }
 
 interface TodoListProps {
+  //todos is array =>[] of objects=> Todo
   todos: Todo[];
   onToggle: (id: number) => void;
   onRemove: (id: number) => void;
@@ -16,7 +18,7 @@ interface TodoListProps {
 
 const TodoList: React.FC<TodoListProps> = ({ todos, onToggle, onRemove }) => {
   return (
-    <ul>
+    <ul className="todo-list">
       {todos.map((todo) => (
         <TodoItem
           key={todo.id}

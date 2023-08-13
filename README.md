@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# To Do List App With React & Typescript
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

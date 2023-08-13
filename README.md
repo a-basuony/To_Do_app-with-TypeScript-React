@@ -1,6 +1,6 @@
 # To Do List App With React & Typescript
 
-you could visit it in  [by Click here](https://github.com/facebook/create-react-app).
+you could visit it by  [Click here](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 

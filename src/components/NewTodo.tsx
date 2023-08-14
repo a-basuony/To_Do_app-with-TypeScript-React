@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 
-const NewTodo: React.FC = () => {
+const NewTodo: React.FC<{ onAddItem: (text: string | undefined) => void }> = (
+  props
+) => {
   const inputTextRef = useRef<HTMLInputElement>(null);
 
   const submitHandler = (event: React.FormEvent) => {
@@ -12,10 +14,12 @@ const NewTodo: React.FC = () => {
       //throw new Error
       return;
     }
+
+    props.onAddItem(enteredInputText);
   };
 
   return (
-    <form onSubmit={submitHandler}>
+    <form onSubmit={submitHandler} className="from">
       <label htmlFor="input">add Item</label>
       <input
         type="text"

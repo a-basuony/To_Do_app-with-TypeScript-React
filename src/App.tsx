@@ -33,7 +33,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="App">
+    <div className="form">
       <h1 className="header">Todo App</h1>
       <div className="input-container">
         <input

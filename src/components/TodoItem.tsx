@@ -19,10 +19,10 @@ const TodoItem: React.FC<TodoItemProps> = ({
       <div className="todo-text" onClick={onToggle}>
         {text}
       </div>
-      <button className="complete-button" onClick={onToggle}>
+      <button id="complete-button" onClick={onToggle}>
         {completed ? "Undo" : "Complete"}
       </button>
-      <button className="remove-button" onClick={onRemove}>
+      <button id="remove-button" onClick={onRemove}>
         Remove
       </button>
     </li>
